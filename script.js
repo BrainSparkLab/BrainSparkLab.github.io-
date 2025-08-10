@@ -10,3 +10,6 @@ document.getElementById("sparkBtn").addEventListener("click", function() {
     const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
     document.getElementById("sparkText").textContent = randomIdea;
 });
+document.getElementById("clickBtn").addEventListener("click", function() {
+    document.getElementById("output").textContent = "Hello! Your setup is working perfectly 🎉";
+});
