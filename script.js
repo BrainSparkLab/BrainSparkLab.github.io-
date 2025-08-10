@@ -1,15 +1,18 @@
-document.getElementById("sparkBtn").addEventListener("click", function() {
-    const ideas = [
-        "Start a podcast about random shower thoughts 🚿",
-        "Invent a smart fridge that roasts you for eating junk 🍔",
-        "Make an app that reminds you to drink water 💧",
-        "Create a chair that massages you during Zoom calls 🪑",
-        "Design sneakers that charge your phone while walking 👟"
-    ];
+// Tab switching logic
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-    const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
-    document.getElementById("sparkText").textContent = randomIdea;
-});
-document.getElementById("clickBtn").addEventListener("click", function() {
-    document.getElementById("output").textContent = "Hello! Your setup is working perfectly 🎉";
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons & contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Add active class to clicked button & corresponding content
+      button.classList.add('active');
+      const tabId = button.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
 });
