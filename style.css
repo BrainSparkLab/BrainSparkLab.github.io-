@@ -1,178 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    text-align: center;
-    padding: 50px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #ffcc00;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ffdb4d;
-}
-
-#sparkText {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-footer {
-    margin-top: 50px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
-}
-
-header {
-    background: #333;
-    color: white;
-    padding: 15px 0;
-}
-
-main {
-    margin-top: 50px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-footer {
-    margin-top: 50px;
-    padding: 10px;
-    background: #333;
-    color: white;
-}
-/* Reset & base */
+/* Reset */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  background: #f7f9fc;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   color: #222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-header {
-  background: #007acc;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
 }
+
+header {
+  background: #4a90e2;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
 main {
   flex: 1;
-  max-width: 900px;
-  margin: 2rem auto;
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 2rem 0;
 }
+
+.facts-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #2a3d66;
+  font-size: 2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.facts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.fact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 6px 15px rgba(74, 144, 226, 0.15);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.fact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(74, 144, 226, 0.3);
+}
+
+.fact-icon {
+  flex-shrink: 0;
+  font-size: 2.8rem;
+  color: #4a90e2;
+  margin-top: 4px;
+}
+
+.fact-text {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 footer {
-  background: #007acc;
+  background: #4a90e2;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
+  font-weight: 400;
   font-size: 0.9rem;
+  box-shadow: 0 -4px 8px rgba(74, 144, 226, 0.3);
 }
 
-.interactive-section h2 {
-  margin-bottom: 1.5rem;
-  color: #007acc;
-  border-bottom: 3px solid #007acc;
-  padding-bottom: 0.3rem;
-}
 
-/* Tabs */
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 1.5rem;
-}
-.tab-btn {
-  flex: 1;
-  background: #e6f0ff;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  color: #007acc;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-.tab-btn:hover {
-  background: #c2dbff;
-}
-.tab-btn.active {
-  background: #007acc;
-  color: white;
-}
-
-/* Tab content */
-.tab-content {
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
-.tab-content ul {
-  list-style-type: disc;
-  margin-left: 1.3rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-.tab-content ul li {
-  margin-bottom: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .tabs {
-    flex-direction: column;
-  }
-}
-
-body {
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  color: #333;
-  font-family: 'Arial', sans-serif;
-}
 
 
